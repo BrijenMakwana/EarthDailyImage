@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image, Dimensions} from "react-native";
+import moment from "moment";
 
 export type EarthImageItemProps = {
     earthItem:{
@@ -18,7 +19,7 @@ const EarthImageItem = (props: EarthImageItemProps) => {
     return (
         <View style={styles.container}>
             <Text style={styles.date}>
-                Capture on 7th Fab 22
+                Capture on {moment(month +"/"+ date + "/" + year).format("Do MMM YY")}
             </Text>
             <View style={styles.imageContainer}>
                 <Image
